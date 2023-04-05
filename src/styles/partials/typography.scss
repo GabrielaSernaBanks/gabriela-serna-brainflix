@@ -1,13 +1,27 @@
 //fonts
 @font-face {
   font-family: 'Avenir', Arial, Helvetica, sans-serif;
-  src: url(assets/fonts/AvenirNextLTPro-Regular.otf);
+  src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf);
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'Avenir', Arial, Helvetica, sans-serif;
-  src: url(assets/fonts/AvenirNextLTPro-Regular.otf);
+  src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf);
   font-weight: 400;
 }
 
+
+
+// desktop/tablet typography
+// $desktop-tablet-pageHeader: {
+//   font-size: 2.0625rem;
+//   line-height: 2.75rem;
+//   font-weight: 700;
+// }
+
+
+// $desktop-tablet-sectionHeader:
+//   font-size: .75rem;
+//   line-height: 1.375rem;
+//   font-weight: 700;
