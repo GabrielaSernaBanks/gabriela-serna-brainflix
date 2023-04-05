@@ -25,7 +25,9 @@
   width: 55%;
   height: 2.25rem;
   padding-left: 2.5rem;
-  color: $primary-color-black;
+  background-color: $secondary-color-alabaster;
+  border: 1px solid $secondary-color-mercury;
+  border-radius: 4px;
 }
 
 &__search-icon{
