@@ -4,6 +4,8 @@
 // @import "../../styles/partials/typography.scss";
 
 .nav{
+  display: flex;
+  flex-direction: column;
 
 &__logo{
   text-align: center;
@@ -14,14 +16,22 @@
   padding: 1rem;
 }
 
-&__search{
+&__search {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
 }
 
 &__search-bar{
-  width: 65%;
+  width: 55%;
+  height: 2.25rem;
+  padding-left: 2.5rem;
   color: $primary-color-black;
+}
+
+&__search-icon{
+  position: absolute;
+  left: 30px;
+  top: 74px;
 }
 
 &__search-image{
