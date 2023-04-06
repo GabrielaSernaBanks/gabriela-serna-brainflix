@@ -43,16 +43,4 @@
   border-radius: 50%
 }
 
-&__upload{
-  padding: 1rem 1em;
-}
-
-&__upload-button{
-@include button
-}
-
-&__upload-text{
-  padding-left: 5rem;
-}
-
 }

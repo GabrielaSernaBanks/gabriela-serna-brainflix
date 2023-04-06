@@ -1,0 +1,17 @@
+@import "../../styles/partials/globals";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/typography.scss";
+
+
+.upload{
+  padding: 1rem 1em;
+
+  &__button{
+  @include button
+  }
+
+  &__button-text{
+    padding-left: 5rem;
+  }
+}
