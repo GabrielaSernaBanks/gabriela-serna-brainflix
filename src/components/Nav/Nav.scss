@@ -44,3 +44,15 @@
 }
 
 }
+
+.upload{
+  padding: 1rem 1em;
+
+  &__button{
+  @include button
+  }
+
+  &__button-text{
+    padding-left: 5rem;
+  }
+}
