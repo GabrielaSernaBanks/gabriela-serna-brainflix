@@ -9,7 +9,7 @@ function MainVideo() {
 
   const buttonClicked = () =>{
     setVideoIndex(videoIndex + 1);
-    console.log('button was clicked', videoIndex)
+    // console.log('button was clicked', videoIndex)
   }
 
 
@@ -17,8 +17,8 @@ function MainVideo() {
   return (
 
     <div>
-      <img className="mainVideo__image" src={videos[videoIndex].image}></img>
-      <button onClick={buttonClicked}>Click Here {videoIndex}</button>
+      <video className="mainVideo__image" poster={videos[videoIndex].image} controls></video>
+      {/* <button onClick={buttonClicked}>Click Here {videoIndex}</button> */}
 
     </div>
   );
