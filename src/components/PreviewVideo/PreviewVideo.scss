@@ -10,10 +10,11 @@
 
 &__info{
   padding-left: 1rem;
+  @include subheader-mobile;
 }
 
 &__image{
-  height: 95px;
+  height: 75px;
   width: 130px;
   border-radius: 4px;
   object-fit: cover;

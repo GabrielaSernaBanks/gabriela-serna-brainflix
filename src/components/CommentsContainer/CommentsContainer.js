@@ -16,6 +16,7 @@ function CommentsContainer({ videoInfo, videoIndex }) {
             alt="Side photo of a fan"
         ></img>
         <form className="commentsContainer__form">
+            <div className="commentsContainer__formInput">
             <label className="commentsContainer__title" for="comment">
             JOIN THE CONVERSATION
             </label>
@@ -27,6 +28,7 @@ function CommentsContainer({ videoInfo, videoIndex }) {
             name="comment"
             placeholder="Add a new comment"
             ></input>
+            </div>
             <button className="commentsContainer__button">
             <img src={addComment}></img>
             <span className="commentsContainer__button-text">COMMENT</span>

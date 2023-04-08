@@ -14,9 +14,10 @@ function Nav() {
             <div className='nav__search'>
                 <input className='nav__search-bar' placeholder="Search"/>
                 <img className='nav__search-icon' src={search}></img>
-                <img className='nav__search-image' src={image} alt='avatar of man' />
             </div>
+            <img className='nav__search-image' src={image} alt='avatar of man' />
             <div className="upload">
+                <img className='nav__search-image--tablet' src={image} alt='avatar of man' />
                 <button className="upload__button" placeholder="UPLOAD">
                     <img src={upload}></img>
                     <span className="upload__button-text">UPLOAD</span>

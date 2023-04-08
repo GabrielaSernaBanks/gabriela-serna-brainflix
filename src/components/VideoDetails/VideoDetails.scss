@@ -1,10 +1,22 @@
-@import '../../styles/partials/variables';
+@import "../../styles/partials/globals";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/typography.scss";
 
 .videoDetails{
   margin: 0 1rem;
   font-size: 0.8rem;
 
+  &__header{
+    @include page-header-mobile;
+
+    @include tablet{
+      @include page-header-tablet-desktop;
+    }
+  }
+
   &__container{
+    @include subheader-mobile;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -12,17 +24,48 @@
     border-bottom: 1px solid $secondary-color-mercury;
   }
 
-  &__channel{
-    font-weight: 700;
+  &__date{
+    color: $primary-color-silver;
+  }
+
+  &__info{
+
+
+    @include tablet {
+      display: flex;
+    }
   }
 
   &__info-2{
     color: $primary-color-silver;
     padding-right: 2rem;
+
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &__channel {
+
+    @include tablet {
+      padding-right: 2rem;
+    }
+  }
+
+  &__likes {
+
+
+    @include tablet{
+      padding-left: 2rem;
+    }
   }
 
   &__icon{
     padding-right: .4375rem;
+  }
+
+  &__description{
+    @include body-copy-mobile;
   }
 
 }

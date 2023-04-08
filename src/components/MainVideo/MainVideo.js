@@ -5,8 +5,7 @@ function MainVideo({videoInfo, videoIndex}) {
 
   return (
 
-    <div>
-      
+    <div className='mainVideo__container'>
       <video className="mainVideo__image" poster={videoInfo[videoIndex].image} controls></video>
     </div>
   );

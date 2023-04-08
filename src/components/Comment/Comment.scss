@@ -22,9 +22,11 @@
     align-items: center;
     width: 80%;
     padding-left: 1rem;
-    margin-top: -0.6rem;
+    margin-top: -0.9rem;
+    @include body-copy-mobile;
 
   }
+
   &__name{
     font-weight: 700;
   }
@@ -35,8 +37,9 @@
   }
 
   &__text{
-    font-size: 0.9rem;
     margin-left: 3rem;
-    margin-top: 0rem;
+    margin-top: -0.4rem;
+    @include body-copy-mobile;
+
   }
 }
