@@ -7,11 +7,12 @@ function PreviewVideoContainer({videoInfo, clickHandler}) {
     <div>
       <h1>NEXT VIDEOS</h1>
       {
-        videoInfo.map((video, key) => {
+        videoInfo.map((video, index) => {
           return(
             <PreviewVideo 
             clickHandler={clickHandler} 
-            key={key} 
+            key={index} 
+            index={index}
             video={video}/>
           )
         })

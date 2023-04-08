@@ -1,7 +1,3 @@
-
-
-
-
 function VideoDetails({videoInfo, videoIndex}) {
   const epoch = videoInfo[videoIndex].timestamp;
   const date = new Date(epoch).toLocaleDateString("en-US")
@@ -19,10 +15,6 @@ function VideoDetails({videoInfo, videoIndex}) {
   );
 
 }
-
-
-
-
 
 
 export default VideoDetails;
