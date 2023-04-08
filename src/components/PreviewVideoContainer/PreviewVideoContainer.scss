@@ -1,0 +1,14 @@
+@import "../../styles/partials/globals";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/typography.scss";
+
+.previewVideoContainer{
+  &__header{
+    margin: 0 1rem;
+    font-size: .75rem;
+    color: $primary-color-silver;
+    font-weight: 500;
+    border-top: 1px solid $primary-color-silver;
+  }
+}

@@ -12,7 +12,6 @@ function Comment({comment}) {
         <p className="comment__name">{comment.name}</p>
         <p className="comment__date">{date}</p>
       </div>
-
       <p className="comment__text">{comment.comment}</p>
     </div>
   );
