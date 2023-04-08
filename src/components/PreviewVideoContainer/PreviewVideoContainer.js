@@ -1,15 +1,18 @@
 import PreviewVideo from "../PreviewVideo/PreviewVideo";
 
-function PreviewVideoContainer({videoInfo}) {
+function PreviewVideoContainer({videoInfo, clickHandler}) {
 
   return (
 
     <div>
       <h1>NEXT VIDEOS</h1>
       {
-        videoInfo.map((video) => {
+        videoInfo.map((video, key) => {
           return(
-            <PreviewVideo key={video.id} video={video}/>
+            <PreviewVideo 
+            clickHandler={clickHandler} 
+            key={key} 
+            video={video}/>
           )
         })
       }

@@ -3,13 +3,6 @@ import './MainVideo.scss'
 
 function MainVideo({videoInfo, videoIndex}) {
 
-
-  // const buttonClicked = () =>{
-  //   setVideoIndex(videoIndex + 1);
-  // }
-
-console.log(videoIndex, "from mainVideo.js")
-
   return (
 
     <div>

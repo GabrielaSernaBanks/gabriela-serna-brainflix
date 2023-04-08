@@ -1,7 +1,6 @@
 
 
 function Comment({videoInfo, videoIndex, comment}) {
-  console.log (videoInfo)
   const epoch = comment.timestamp;
   const date = new Date(epoch).toLocaleDateString("en-US")
 
