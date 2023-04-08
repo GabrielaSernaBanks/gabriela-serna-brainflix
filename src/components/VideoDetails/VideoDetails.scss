@@ -1,0 +1,30 @@
+@import '../../styles/partials/variables';
+
+.videoDetails{
+  margin: 0 1rem;
+  font-size: 0.8rem;
+
+  // display: flex;
+  // flex-direction: column;
+
+  &__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid $secondary-color-mercury;
+    border-bottom: 1px solid $secondary-color-mercury;
+  }
+
+  &__channel{
+    font-weight: 700;
+  }
+
+  &__info-2{
+    color: $primary-color-silver;
+    padding-right: 2rem;
+  }
+
+
+
+  
+}
