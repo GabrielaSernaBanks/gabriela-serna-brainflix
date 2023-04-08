@@ -13,7 +13,8 @@
     background-color: $secondary-color-black;
     height: 20rem;
   }
-}
 
-.mainVideo__container{
+  @include desktop{
+    height: 35rem;
+  }
 }

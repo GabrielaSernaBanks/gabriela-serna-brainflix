@@ -12,6 +12,10 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+
+  @include desktop{
+    padding: 0 4rem;
+  }
   }
 
   &__logo{
@@ -30,6 +34,11 @@
   &__search {
     display: flex;
     padding: 0 1rem;
+
+
+    @include desktop{
+      padding-left: 25rem;
+    }
   }
 
   &__search-bar{
@@ -39,6 +48,7 @@
     background-color: $secondary-color-alabaster;
     border: 1px solid $secondary-color-mercury;
     border-radius: 4px;
+
   }
 
   &__search-icon{
@@ -50,6 +60,10 @@
       position: absolute;
       left: 13.75rem;
       top: 1.75rem
+    }
+
+    @include desktop{
+      left: 42rem;
     }
   }
 

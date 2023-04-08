@@ -1,5 +1,30 @@
-@import "../../styles/partials/globals";
-@import "../../styles/partials/mixins";
-@import "../../styles/partials/variables";
-@import "../../styles/partials/typography.scss";
+@import "./styles/partials/globals";
+@import "./styles/partials/mixins";
+@import "./styles/partials/variables";
+@import "./styles/partials/typography.scss";
 
+
+.app__desktopDivMain{
+
+  @include desktop{
+    display: flex;
+    flex-direction: row;
+    width: 87%;
+    margin: 0 auto;
+  }
+}
+
+.app__desktopDivDetails{
+
+  @include desktop{
+      width: 75%;
+
+  }
+}
+
+.app__previewVideoContainer{
+
+  @include desktop{
+    width: 30%;
+  }
+}
