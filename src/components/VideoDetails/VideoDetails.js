@@ -17,8 +17,8 @@ function VideoDetails({videoInfo, videoIndex}) {
           <p className='videoDetails__date'>{date}</p>
       </div>
       <div className='videoDetails__info-2'>
-          <p className='videoDetails__views'> <img src={views} ></img>{videoInfo[videoIndex].views}</p>
-          <p className='videoDetails__likes'> <img src={likes} ></img>{videoInfo[videoIndex].likes}</p>
+          <p className='videoDetails__views'> <img className='videoDetails__icon' src={views} ></img>{videoInfo[videoIndex].views}</p>
+          <p className='videoDetails__likes'> <img className='videoDetails__icon' src={likes} ></img>{videoInfo[videoIndex].likes}</p>
 
       </div>
     </div> 
