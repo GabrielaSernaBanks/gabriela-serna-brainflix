@@ -1,3 +1,4 @@
+import './Comment.scss';
 
 
 function Comment({comment}) {
@@ -5,10 +6,14 @@ function Comment({comment}) {
   const date = new Date(epoch).toLocaleDateString("en-US")
 
   return (
-    <div>
-      <p>{comment.name}</p>
-      <p>{date}</p>
-      <p>{comment.comment}</p>
+    <div className="comment">
+      <img className="comment__avatar-plceholder"></img>
+      <div className="comment__info">
+        <p className="comment__name">{comment.name}</p>
+        <p className="comment__date">{date}</p>
+      </div>
+
+      <p className="comment__text">{comment.comment}</p>
     </div>
   );
 

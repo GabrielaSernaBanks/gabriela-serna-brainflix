@@ -1,0 +1,42 @@
+@import "../../styles/partials/globals";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/typography.scss";
+
+.comment{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  border-top: 1px solid $secondary-color-mercury;
+  padding-top: 1rem;
+
+  &__avatar-plceholder{
+    background-color: $secondary-color-mercury;
+    height:2.25rem;
+    width:2.25rem;
+    border-radius:50%;
+  }
+  &__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding-left: 1rem;
+    margin-top: -0.6rem;
+
+  }
+  &__name{
+    font-weight: 700;
+  }
+
+  &__date{
+    color: $primary-color-silver;
+    font-weight: 500;
+  }
+
+  &__text{
+    font-size: 0.9rem;
+    margin-left: 3rem;
+    margin-top: 0rem;
+  }
+}

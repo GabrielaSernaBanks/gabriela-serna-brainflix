@@ -50,4 +50,8 @@
     @include button;
   }
 
+  &__button-text{
+    padding-left: 5rem;
+  }
+
 }
