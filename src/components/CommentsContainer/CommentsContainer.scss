@@ -1,0 +1,53 @@
+@import "../../styles/partials/globals";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/typography.scss";
+
+
+.commentsContainer{
+  padding: 0 1rem;
+
+  &__count{
+    font-size: .75rem;
+    font-weight: 700;
+  }
+
+  &__details{
+    display: flex;
+  }
+
+  &__avatar{
+    height:2.25rem;
+    width:2.25rem;
+    border-radius:50%;
+    margin-top: 1.2rem;
+    object-fit: cover;
+  }
+
+  &__form{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: .625rem;
+    padding-left: .5rem;
+    width: 100%;
+  }
+
+  &__title{
+    font-size: .75rem;
+    font-weight: 700;
+    color: $primary-color-silver;
+  }
+
+  &__newComment{
+    height: 4rem;
+    background-color: $secondary-color-alabaster;
+    border: 1px solid $secondary-color-mercury;
+    border-radius: 4px;
+  }
+
+  &__button{
+    margin-top: 1rem;
+    @include button;
+  }
+
+}
