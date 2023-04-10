@@ -1,6 +1,5 @@
 import './MainVideo.scss'
 
-
 function MainVideo({videoInfo, videoIndex}) {
 
   return (
