@@ -6,6 +6,7 @@ import videoInfo from "./data/video-details.json";
 import CommentsContainer from "./components/CommentsContainer/CommentsContainer";
 import PreviewVideoContainer from "./components/PreviewVideoContainer/PreviewVideoContainer";
 import "./App.scss";
+import UploadPage from "./pages/UploadPage/UploadPage";
 
 function App() {
   const [videoIndex, setVideoIndex] = useState(0);
@@ -23,6 +24,7 @@ function App() {
     <div>
       <Nav />
       <MainVideo videoInfo={videoInfo} videoIndex={videoIndex} />
+      <UploadPage />
       <div className="app__desktopDivMain">
         <div className="app__desktopDivDetails">
           <VideoDetails videoInfo={videoInfo} videoIndex={videoIndex} />
