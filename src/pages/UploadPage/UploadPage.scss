@@ -1,0 +1,25 @@
+@import "../../styles/partials/globals";
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/typography.scss";
+
+.uploadPage{
+  display: flex;
+  flex-direction: column;
+
+  &__formInput{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem;
+  }
+
+  &__button{
+    @include button;
+    padding: 0 4rem;
+    margin: 0rem 2rem;
+  }
+
+  &__button-text{
+    padding-left: 3rem;
+  }
+}
