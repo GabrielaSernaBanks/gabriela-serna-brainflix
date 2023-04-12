@@ -7,6 +7,10 @@ import CommentsContainer from "./components/CommentsContainer/CommentsContainer"
 import PreviewVideoContainer from "./components/PreviewVideoContainer/PreviewVideoContainer";
 import "./App.scss";
 import UploadPage from "./pages/UploadPage/UploadPage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// "api_key": "42e9c01f-8636-431d-964b-dbdc0c73435c"
+
 
 function App() {
   const [videoIndex, setVideoIndex] = useState(0);
@@ -21,10 +25,11 @@ function App() {
   };
 
   return (
-    <div>
+    <BrowserRouter>
       <Nav />
-      <MainVideo videoInfo={videoInfo} videoIndex={videoIndex} />
-      <UploadPage />
+    <div>
+      {/* <MainVideo videoInfo={videoInfo} videoIndex={videoIndex} /> */}
+      
       <div className="app__desktopDivMain">
         <div className="app__desktopDivDetails">
           <VideoDetails videoInfo={videoInfo} videoIndex={videoIndex} />
@@ -38,7 +43,15 @@ function App() {
           />
         </div>
       </div>
-    </div>
+      </div>
+
+      <Routes>
+        <Route path='/' element={<MainVideo videoInfo={videoInfo} videoIndex={videoIndex} />} />
+        <Route path='upload-page' element={<UploadPage />} />
+      </Routes>
+    </BrowserRouter>
+
+
   );
 }
 
