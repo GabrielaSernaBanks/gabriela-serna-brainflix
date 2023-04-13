@@ -4,25 +4,25 @@ import views from '../../assets/Icons/views.svg'
 
 
 
-function VideoDetails({videoInfo, videoIndex}) {
-  const epoch = videoInfo[videoIndex].timestamp;
-  const date = new Date(epoch).toLocaleDateString("en-US")
+function VideoDetails() {
+  // const epoch = videoInfo[videoIndex].timestamp;
+  // const date = new Date(epoch).toLocaleDateString("en-US")
 
   return (
     <div className='videoDetails'>
-    <h1 className='videoDetails__header'>{videoInfo[videoIndex].title}</h1>
+    <h1 className='videoDetails__header'></h1>
     <div className='videoDetails__container'>
       <div className='videoDetails__info'>
-          <p className='videoDetails__channel'>By {videoInfo[videoIndex].channel}</p>
-          <p className='videoDetails__date'>{date}</p>
+          <p className='videoDetails__channel'>By </p>
+          <p className='videoDetails__date'></p>
       </div>
       <div className='videoDetails__info-2'>
-          <p className='videoDetails__views'> <img className='videoDetails__icon' src={views} ></img>{videoInfo[videoIndex].views}</p>
-          <p className='videoDetails__likes'> <img className='videoDetails__icon' src={likes} ></img>{videoInfo[videoIndex].likes}</p>
+          <p className='videoDetails__views'> <img className='videoDetails__icon' ></img></p>
+          <p className='videoDetails__likes'> <img className='videoDetails__icon'></img></p>
 
       </div>
     </div> 
-    <p className='videoDetails__description'>{videoInfo[videoIndex].description}</p>
+    <p className='videoDetails__description'></p>
     </div>
   
   );

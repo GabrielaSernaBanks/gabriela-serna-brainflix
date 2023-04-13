@@ -2,53 +2,45 @@ import './MainVideo.scss'
 import VideoDetails from '../../components/VideoDetails/VideoDetails';
 import CommentsContainer from '../../components/CommentsContainer/CommentsContainer';
 import PreviewVideoContainer from '../../components/PreviewVideoContainer/PreviewVideoContainer';
-import videoInfo from "../../data/video-details.json";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from 'axios';
 
+const baseUrl = 'https://project-2-api.herokuapp.com'
+const ApiKey = '?api_key=42e9c01f-8636-431d-964b-dbdc0c73435c'
 
 
 function MainVideo (){
 
   const [videoImage, setVideoImage] = useState('image');
+  const [videoImages, setVideoImages] = useState([]);
   const changeHandler = (event) => {
     const selectVideoImage = event.target;
-    setVideoImage(select.image)
+    setVideoImage(videoImage.image)
   }
 
+  useEffect(()=>{
+    axios
+    .get(`${baseUrl}/videos${ApiKey}`)
+    .then((response)=>{
+      setVideoImages(response.data);
+    })
+    }, []);
 
-  
-}
-  // const [videoIndex, setVideoIndex] = useState(0);
-  // const selectedVideo = videoInfo.filter(
-  //   (video) => video.id !== videoInfo[videoIndex].id
-  // );
-
-  // const videoClicked = (index) => {
-  //   setVideoIndex(index + 1);
-  // };
-
-  return (
-
-    <div className='mainVideo__container'>
-      <video className="mainVideo__image" poster={videoInfo[videoIndex].image} controls></video>
-      <div className="app__desktopDivMain">
-        <div className="app__desktopDivDetails">
-          <MainVideo videoInfo={videoInfo} videoIndex={videoIndex} />
-          <VideoDetails videoInfo={videoInfo} videoIndex={videoIndex} />
-          <CommentsContainer videoInfo={videoInfo} videoIndex={videoIndex} />
-        </div>
-        <div className="app__previewVideoContainer">
-          <PreviewVideoContainer
-            videoInfo={selectedVideo}
-            videoIndex={videoIndex}
-            clickHandler={videoClicked}
-          />
+    return (
+      <div className='mainVideo__container'>
+        <video className="mainVideo__image" controls>
+          
+        </video>
+        <div className="app__desktopDivMain">
+          <div className="app__desktopDivDetails">
+            <VideoDetails  />
+            <CommentsContainer />
+          </div>
+          <div className="app__previewVideoContainer"></div>
         </div>
       </div>
-
-        </div>
-  );
+    );
+  
 }
 
 export default MainVideo;

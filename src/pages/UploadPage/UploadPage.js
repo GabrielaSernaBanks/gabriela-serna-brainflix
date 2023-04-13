@@ -1,7 +1,7 @@
 import './UploadPage.scss'
 import publishIcon from '../../assets/Icons/publish.svg'
 
-function UploadPage({videoInfo, videoIndex}) {
+function UploadPage() {
 
   return (
 

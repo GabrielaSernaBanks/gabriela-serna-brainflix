@@ -1,15 +1,16 @@
 import './PreviewVideo.scss'
 
-function PreviewVideo({video, clickHandler, index }) {
+function PreviewVideo( ) {
   
   return (
-    <div  onClick={() => clickHandler(index)} className="previewVideo">
+    <div  className="previewVideo">
+      <h1>PREVIEW VIDEO</h1>
       <div className='previewVideo__image-container'>
-      <img className="previewVideo__image" src={video.image}></img>
+      <img className="previewVideo__image" ></img>
       </div>
       <div className='previewVideo__info'>
-        <p className="previewVideo__title">{video.title}</p>
-        <p className="previewVideo__channel">{video.channel}</p>
+        <p className="previewVideo__title"></p>
+        <p className="previewVideo__channel"></p>
       </div>
 
     </div>
