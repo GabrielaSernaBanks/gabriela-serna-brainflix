@@ -13,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainVideo />} />
         <Route path="upload-page" element={<UploadPage />} />
+        <Route path="video-player" element={<MainVideo />} />
       </Routes>
       </div>
   );

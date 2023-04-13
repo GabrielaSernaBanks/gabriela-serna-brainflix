@@ -17,7 +17,7 @@ function CommentsContainer() {
         ></img>
         <form className="commentsContainer__form">
             <div className="commentsContainer__formInput">
-            <label className="commentsContainer__title" for="comment">
+            <label className="commentsContainer__title" htmlFor="comment">
             JOIN THE CONVERSATION
             </label>
             <input

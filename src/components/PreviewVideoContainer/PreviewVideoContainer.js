@@ -1,18 +1,23 @@
 import PreviewVideo from "../PreviewVideo/PreviewVideo";
 import './PreviewVideoContainer.scss'
 
-function PreviewVideoContainer() {
+function PreviewVideoContainer({videoList, clickHandler}) {
 
   return (
 
     <div className="previewVideoContainer">
       <p className="previewVideoContainer__header">NEXT VIDEOS</p>
-      
-        {/* // videoInfo.map((video, index) => { */}
-          {/* // return( */}
-            <PreviewVideo />
-          
-
+      {
+        videoList.map((video, index) => {
+          return(
+            <PreviewVideo 
+            clickHandler={clickHandler} 
+            key={index} 
+            index={index}
+            video={video}/>
+          )
+        })
+      }
 
     </div>
   );

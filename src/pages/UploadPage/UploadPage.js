@@ -1,12 +1,14 @@
 import './UploadPage.scss'
 import publishIcon from '../../assets/Icons/publish.svg'
+import thumbnail from '../../assets/Images/Upload-video-preview.jpg'
 
 function UploadPage() {
 
   return (
 
     <div className='uploadPage'>
-      <h1 className='uploadPage__header'>This is the upload component</h1>
+      <h1 className='uploadPage__header'>Upload Video</h1>
+      <img src={thumbnail} />
       <div className='uploadPage__video-container'>
         <p>VIDEO THUMBNAIL</p>
         {/* <video className="mainVideo__image" poster={videoInfo[videoIndex].image} controls></video> */}
@@ -38,6 +40,9 @@ function UploadPage() {
             <img className='uploadPage__button-icon' src={publishIcon}></img>
             <span className="uploadPage__button-text">PUBLISH</span>
             </button>
+            <p>CANCEL</p>
+            {/* <button className="uploadPage__button-cancel">CANCEL
+            </button> */}
         </form>
       </div>
     </div>

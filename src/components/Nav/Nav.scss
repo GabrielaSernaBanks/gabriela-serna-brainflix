@@ -114,9 +114,17 @@
 
   &__button-text{
     padding-left: 5rem;
+    text-decoration: 'none';
+
 
     @include tablet{
       padding-left: 3rem;
     }
   }
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
 }
