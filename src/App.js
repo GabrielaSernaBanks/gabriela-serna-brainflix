@@ -1,37 +1,41 @@
 import Nav from "./components/Nav/Nav";
-import MainVideo from "./components/MainVideo/MainVideo";
-import VideoDetails from "./components/VideoDetails/VideoDetails";
-import React, { useState } from "react";
-import videoInfo from "./data/video-details.json";
-import CommentsContainer from "./components/CommentsContainer/CommentsContainer";
-import PreviewVideoContainer from "./components/PreviewVideoContainer/PreviewVideoContainer";
+import MainVideo from "./pages/MainVideo/MainVideo";
+// import VideoDetails from "./components/VideoDetails/VideoDetails";
+import React from "react";
+// import videoInfo from "./data/video-details.json";
+// import CommentsContainer from "./components/CommentsContainer/CommentsContainer";
+// import PreviewVideoContainer from "./components/PreviewVideoContainer/PreviewVideoContainer";
 import "./App.scss";
 import UploadPage from "./pages/UploadPage/UploadPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // "api_key": "42e9c01f-8636-431d-964b-dbdc0c73435c"
 
-
 function App() {
-  const [videoIndex, setVideoIndex] = useState(0);
+  // const [videoIndex, setVideoIndex] = useState(0);
 
-  const selectedVideo = videoInfo.filter(
-    (video) => video.id !== videoInfo[videoIndex].id
-  );
+  // const selectedVideo = videoInfo.filter(
+  //   (video) => video.id !== videoInfo[videoIndex].id
+  // );
 
-  const videoClicked = (index) => {
-    setVideoIndex(index + 1);
-    console.log(index);
-  };
+  // const videoClicked = (index) => {
+  //   setVideoIndex(index + 1);
+  //   console.log(index);
+  // };
 
   return (
-    <BrowserRouter>
+    <>
       <Nav />
-    <div>
-      {/* <MainVideo videoInfo={videoInfo} videoIndex={videoIndex} /> */}
-      
-      <div className="app__desktopDivMain">
+      <Routes>
+        <Route path="/" element={<MainVideo />} />
+        <Route path="upload-page" element={<UploadPage />} />
+      </Routes>
+      <div>
+        {/* <MainVideo videoInfo={videoInfo} videoIndex={videoIndex} /> */}
+
+        {/* <div className="app__desktopDivMain">
         <div className="app__desktopDivDetails">
+          <MainVideo videoInfo={videoInfo} videoIndex={videoIndex} />
           <VideoDetails videoInfo={videoInfo} videoIndex={videoIndex} />
           <CommentsContainer videoInfo={videoInfo} videoIndex={videoIndex} />
         </div>
@@ -42,16 +46,9 @@ function App() {
             clickHandler={videoClicked}
           />
         </div>
+      </div> */}
       </div>
-      </div>
-
-      <Routes>
-        <Route path='/' element={<MainVideo videoInfo={videoInfo} videoIndex={videoIndex} />} />
-        <Route path='upload-page' element={<UploadPage />} />
-      </Routes>
-    </BrowserRouter>
-
-
+    </>
   );
 }
 
