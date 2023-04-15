@@ -52,7 +52,6 @@ function VideoDetails({videoSelectedId, baseUrl, ApiKey}) {
     <p className='videoDetails__description'>{description}</p>
     </div>
     </div>
-  
   );
 }
 

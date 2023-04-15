@@ -7,16 +7,16 @@ import { Route, Routes } from "react-router-dom";
 
 
 function App() {
-  return (
-    <div>
-      <Nav />
-      <Routes>
-        <Route path="/" element={<MainVideo />} />
-        <Route path="upload" element={<UploadPage />} />
-        <Route path="/video/:id" element={<MainVideo />} />
-      </Routes>
-      </div>
-  );
+    return (
+        <div>
+            <Nav />
+            <Routes>
+                <Route path="/" element={<MainVideo />} />
+                <Route path="upload-page" element={<UploadPage />} />
+                <Route path="/video/:id" element={<MainVideo />} />
+            </Routes>
+        </div>
+    );
 }
 
 export default App;

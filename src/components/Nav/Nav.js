@@ -5,7 +5,6 @@ import search from '../../assets/Icons/search.svg'
 import upload from '../../assets/Icons/upload.svg'
 import './Nav.scss'
 import { Link } from 'react-router-dom';
-import MainVideo from '../../pages/MainVideo/MainVideo';
 
 function Nav() {
     return (
