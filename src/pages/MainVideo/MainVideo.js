@@ -12,7 +12,6 @@ const ApiKey = '?api_key=42e9c01f-8636-431d-964b-dbdc0c73435c'
 
 function MainVideo (){
 	const { id } = useParams();
-	const [videoImage, setVideoImage] = useState();
 	const [videoList, setVideoList] = useState([]);
 
     let videoId = null;
@@ -23,7 +22,6 @@ function MainVideo (){
 
 	let videoSelectedId = id || videoId;
     const nextVideo = videoList.filter(video => video.id !== videoSelectedId)
-    console.log(videoSelectedId);
 
 
     
@@ -33,14 +31,7 @@ function MainVideo (){
             .then((response)=>{
                 setVideoList(response.data);
             })
-    }, [])
-
-    console.log(videoList)
-
-const changeHandler = (event) => {
-    const selectVideo = event.target;
-    setVideoImage(selectVideo.value);
-}
+    }, []);
 
     return (
         <div>

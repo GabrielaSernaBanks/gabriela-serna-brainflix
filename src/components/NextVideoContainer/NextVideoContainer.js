@@ -3,8 +3,8 @@ import "./NextVideoContainer.scss";
 
 function NextVideoContainer({ nextVideo }) {
     return (
-        <div className="previewVideoContainer">
-            <p className="previewVideoContainer__header">NEXT VIDEOS</p>
+        <div className="nextVideoContainer">
+            <p className="nextVideoContainer__header">NEXT VIDEOS</p>
             {nextVideo.map((video, id) => {
                 return <NextVideo key={id} video={video} />;
             })}

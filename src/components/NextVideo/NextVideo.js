@@ -17,5 +17,4 @@ function NextVideo({ video }) {
     );
 
 }
-
 export default NextVideo;
