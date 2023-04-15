@@ -3,7 +3,8 @@ import './NextVideo.scss'
 function NextVideo({video, clickHandler, id }) {
   
   return (
-    <div  onClick={() => clickHandler(id)} className="nextVideo">
+    <div>
+    {/* // <div  onClick={() => clickHandler(id)} className="nextVideo"> */}
       <div className='nextVideo__image-container'>
       <img className="nextVideo__image" src={video.image}></img>
       </div>

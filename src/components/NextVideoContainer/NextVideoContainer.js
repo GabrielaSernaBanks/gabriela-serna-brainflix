@@ -1,14 +1,14 @@
 import NextVideo from "../NextVideo/NextVideo";
 import './NextVideoContainer.scss'
 
-function NextVideoContainer({videoList}) {
+function NextVideoContainer({nextVideo}) {
 
   return (
 
     <div className="previewVideoContainer">
       <p className="previewVideoContainer__header">NEXT VIDEOS</p>
       {
-        videoList.map((video, id) => {
+        nextVideo.map((video, id) => {
           return(
             <NextVideo 
             // clickHandler={clickHandler} 

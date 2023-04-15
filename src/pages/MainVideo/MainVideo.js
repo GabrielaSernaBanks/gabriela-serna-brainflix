@@ -1,7 +1,7 @@
 import './MainVideo.scss'
 import VideoDetails from '../../components/VideoDetails/VideoDetails';
 import CommentsContainer from '../../components/CommentsContainer/CommentsContainer';
-import PreviewVideoContainer from '../../components/NextVideoContainer/NextVideoContainer';
+import NextVideoContainer from '../../components/NextVideoContainer/NextVideoContainer';
 import { useState, useEffect } from "react";
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
@@ -15,18 +15,19 @@ function MainVideo (){
 	const [videoImage, setVideoImage] = useState();
 	const [videoList, setVideoList] = useState([]);
 
-	
-    // const selectedVideo = videoList.find(video => video.id === videoId)
-    // setVideoImage(selectedVideo);
+    let videoId = null;
+
+    if(videoList.length > 0){
+        videoId = videoList[0].id;
+    }
+
+	let videoSelectedId = id || videoId;
+    const nextVideo = videoList.filter(video => video.id !== videoSelectedId)
+    console.log(videoSelectedId);
 
 
-const changeHandler = (event) => {
-    const selectVideo = event.target;
-    setVideoImage(selectVideo.value);
-}
-
-  //to get the image from the first item of the array
-	useEffect(()=> {
+    
+    useEffect(()=> {
         axios
             .get(`${baseUrl}/videos/${ApiKey}`)
             .then((response)=>{
@@ -34,24 +35,22 @@ const changeHandler = (event) => {
             })
     }, [])
 
-    return (
-    <div className='mainVideo__container'>
-        <video className="mainVideo__image" poster={videoImage} controls>
-          {/* <source src={videoImage}  /> */}
-        <img />
-        </video>
-        <div className="app__desktopDivMain">
-        <div className="app__desktopDivDetails"> {
+const changeHandler = (event) => {
+    const selectVideo = event.target;
+    setVideoImage(selectVideo.value);
+}
 
-        }
-            <VideoDetails />
-            <CommentsContainer />
-            <PreviewVideoContainer videoList={videoList} />
-        </div>
-        <div className="app__previewVideoContainer"></div>
-        </div>
-    </div>
-    );
+
+    return (
+        <div>
+                <VideoDetails videoSelectedId={videoSelectedId} baseUrl={baseUrl} ApiKey={ApiKey}/>
+                <CommentsContainer videoSelectedId={videoSelectedId} baseUrl={baseUrl} ApiKey={ApiKey} />
+                <NextVideoContainer nextVideo={nextVideo} />
+            
+            <div className="app__previewVideoContainer"></div>
+            </div>
+ 
+        );
 
 }
 
