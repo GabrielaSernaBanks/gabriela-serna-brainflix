@@ -21,7 +21,7 @@ function Nav() {
             <img className='nav__search-image' src={image} alt='avatar of man' />
             <div className="upload">
                 <img className='nav__search-image--tablet' src={image} alt='avatar of man' />
-                <Link to='upload-page'>
+                <Link to='/upload-page'>
                 <button className="upload__button" placeholder="UPLOAD">
                     <img src={upload}></img>
                     <span className="upload__button-text">UPLOAD</span>
