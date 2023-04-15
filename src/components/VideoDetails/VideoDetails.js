@@ -4,8 +4,6 @@ import viewsIcon from '../../assets/Icons/views.svg'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-
-
 function VideoDetails({videoSelectedId, baseUrl, ApiKey}) {
   const [video, setVideo] = useState(null);
 
@@ -28,7 +26,7 @@ function VideoDetails({videoSelectedId, baseUrl, ApiKey}) {
   const epoch = video.timestamp;
   const date = new Date(epoch).toLocaleDateString("en-US")
 
-  const {id, title, channel, image, description, views, likes, duration, comments} = video;
+  const {title, channel, image, description, views, likes} = video;
 
 
   return (
@@ -56,8 +54,6 @@ function VideoDetails({videoSelectedId, baseUrl, ApiKey}) {
     </div>
   
   );
-
 }
-
 
 export default VideoDetails;

@@ -6,9 +6,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 function CommentsContainer({ videoSelectedId, baseUrl, ApiKey }) {
-    // const commentCount = videoInfo[videoIndex].comments.length;
     const [video, setVideo] = useState(null);
     useEffect(() => {
+    
         if (videoSelectedId === null) {
             return;
         }
@@ -23,11 +23,6 @@ function CommentsContainer({ videoSelectedId, baseUrl, ApiKey }) {
     if (video === null) {
         return <div>Loading!!</div>;
     }
-
-    const {comment, name, timestamp} = video;
-
-    console.log(video[0].timestamp);
-
 
     return (
         <div className="commentsContainer">

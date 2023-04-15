@@ -35,11 +35,12 @@ function MainVideo (){
             })
     }, [])
 
+    console.log(videoList)
+
 const changeHandler = (event) => {
     const selectVideo = event.target;
     setVideoImage(selectVideo.value);
 }
-
 
     return (
         <div>
@@ -49,9 +50,7 @@ const changeHandler = (event) => {
             
             <div className="app__previewVideoContainer"></div>
             </div>
- 
         );
-
 }
 
 export default MainVideo;
