@@ -4,27 +4,27 @@
 @import "./styles/partials/typography.scss";
 
 
-.app__desktopDivMain{
+// .app__desktopDivMain{
 
-  @include desktop{
-    display: flex;
-    flex-direction: row;
-    width: 87%;
-    margin: 0 auto;
-  }
-}
+//   @include desktop{
+//     display: flex;
+//     flex-direction: row;
+//     width: 87%;
+//     margin: 0 auto;
+//   }
+// }
 
-.app__desktopDivDetails{
+// .app__desktopDivDetails{
 
-  @include desktop{
-      width: 75%;
+//   @include desktop{
+//       width: 75%;
 
-  }
-}
+//   }
+// }
 
-.app__previewVideoContainer{
+// .app__previewVideoContainer{
 
-  @include desktop{
-    width: 30%;
-  }
-}
+//   @include desktop{
+//     width: 30%;
+//   }
+// }

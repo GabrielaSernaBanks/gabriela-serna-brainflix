@@ -9,7 +9,6 @@ import { useParams } from 'react-router-dom';
 const baseUrl = 'https://project-2-api.herokuapp.com'
 const ApiKey = '?api_key=42e9c01f-8636-431d-964b-dbdc0c73435c'
 
-
 function MainVideo (){
 	const { id } = useParams();
 	const [videoList, setVideoList] = useState([]);
@@ -23,8 +22,6 @@ function MainVideo (){
 	let videoSelectedId = id || videoId;
     const nextVideo = videoList.filter(video => video.id !== videoSelectedId)
 
-
-    
     useEffect(()=> {
         axios
             .get(`${baseUrl}/videos/${ApiKey}`)
@@ -34,13 +31,11 @@ function MainVideo (){
     }, []);
 
     return (
-        <div>
-                <VideoDetails videoSelectedId={videoSelectedId} baseUrl={baseUrl} ApiKey={ApiKey}/>
-                <CommentsContainer videoSelectedId={videoSelectedId} baseUrl={baseUrl} ApiKey={ApiKey} />
-                <NextVideoContainer nextVideo={nextVideo} />
-            
-            <div className="app__previewVideoContainer"></div>
-            </div>
+        <div className='mainVideo'>
+            <VideoDetails videoSelectedId={videoSelectedId} baseUrl={baseUrl} ApiKey={ApiKey}/>
+            <CommentsContainer videoSelectedId={videoSelectedId} baseUrl={baseUrl} ApiKey={ApiKey} />
+            <NextVideoContainer nextVideo={nextVideo} />
+        </div>
         );
 }
 
