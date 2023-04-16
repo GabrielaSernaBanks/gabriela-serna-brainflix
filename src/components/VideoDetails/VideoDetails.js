@@ -32,7 +32,7 @@ function VideoDetails({ videoSelectedId, baseUrl, ApiKey }) {
 		<div className='videoDetails'>
 			<video className="videoDetails__image" poster={image} controls></video>
 			<div className='videoDetails__container'>
-				<h1 className='videoDetails__header'>{title}</h1>
+				<h1 className='videoDetails__header videoDetails__header--tablet-desktop'>{title}</h1>
 				<div className='videoDetails__details'>
 					<div className='videoDetails__info'>
 						<p className='videoDetails__channel'>By {channel}</p>

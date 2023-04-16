@@ -6,10 +6,26 @@
 .nextVideo {
 	margin-left: 1rem;
 	display: flex;
+	align-items: center;
+
+	@include tablet{
+		padding: 0.2rem;
+
+	}
 
 	&__info {
 		padding-left: 1rem;
+		width: 130px;
 		@include subheader-mobile;
+
+		// @include tablet{
+		// 	max-height: 70px;
+		// }
+	}
+
+	&__image-container{
+		width: 100%;
+		
 	}
 
 	&__image {

@@ -14,7 +14,7 @@
 
 		@include tablet {
 			background-color: $secondary-color-black;
-			height: 20rem;
+			max-height: 20rem;
 		}
 
 		@include desktop {
@@ -38,6 +38,13 @@
 
 		@include tablet {
 			@include page-header-tablet-desktop;
+		}
+	}
+
+	&__header--tablet-desktop{
+		@include tablet{
+			border-bottom: none;
+
 		}
 	}
 
