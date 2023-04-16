@@ -4,8 +4,48 @@
 @import "../../styles/partials/typography.scss";
 
 .uploadPage{
+  width: 100%;
   display: flex;
   flex-direction: column;
+
+  &__header-container{
+    width: 100%;
+    border-top: 1px solid $secondary-color-mercury;
+  }
+
+  &__header{
+    padding-top: 1rem;
+    margin-left: 1rem;
+    margin-top: 0rem;
+  }
+
+  &__image-container{
+    width: 100%;
+  }
+
+  &__subheader{
+    @include subheader-mobile;
+    font-weight: 700;
+    color: $primary-color-silver;
+    padding-left: 1rem;
+  }
+
+  &__thumbnail{
+    max-height: 10rem;
+    border-radius: 4px;
+    margin-left: 1rem;
+  
+  }
+
+  &__title{
+    @include section-header-mobile;
+    color: $primary-color-silver;
+  }
+
+  &__description{
+    @include section-header-mobile;
+    color: $primary-color-silver;
+  }
 
   &__formInput{
     display: flex;
@@ -13,13 +53,47 @@
     padding: 1rem 1rem;
   }
 
+  &__video-title{
+    height: 2rem;
+    background-color: $secondary-color-alabaster;
+    border: 1px solid $secondary-color-mercury;
+    border-radius: 4px;
+    width: 97.5%;
+    text-align: start;
+  }
+
+  &__video-description{
+    height: 5rem;
+    background-color: $secondary-color-alabaster;
+    border: 1px solid $secondary-color-mercury;
+    border-radius: 4px;
+    width: 97.5%;
+    text-align: start;
+  }
+
+  &__buttons{
+    padding: 0 1rem;
+  }
+
   &__button{
     @include button;
-    padding: 0 4rem;
-    margin: 0rem 2rem;
+    width: 100%;
+
   }
 
   &__button-text{
-    padding-left: 3rem;
+    width: 100%;
+  }
+
+  &__button-cancel{
+    width: 100%;
+    height: 2.5rem;
+    background-color: $primary-color-white;
+    border: none;
+    border-radius: 4px;
+    color: $primary-color-blue;
+    font-family: 'Avenir';
+    font-weight: 700;
+    margin-top: 1rem;
   }
 }
