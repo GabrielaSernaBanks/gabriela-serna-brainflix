@@ -13,11 +13,13 @@ function Nav() {
                 <Link to='/'> <img className='nav__logo-image' src={logo} alt="Logo" />
                 </Link>
             </div>
-            <div className='nav__search'>
-                <input className='nav__search-bar' placeholder="Search"/>
-                <img className='nav__search-icon' src={search}></img>
+            <div className='nav__search-container'>
+                <div className='nav__search'>
+                    <input className='nav__search-bar' placeholder="Search"/>
+                    <img className='nav__search-icon' src={search}></img>
+                </div>
+                <img className='nav__search-image' src={image} alt='avatar of man' />
             </div>
-            <img className='nav__search-image' src={image} alt='avatar of man' />
             <div className="upload">
                 <img className='nav__search-image--tablet' src={image} alt='avatar of man' />
                 <Link to='/upload-page'>

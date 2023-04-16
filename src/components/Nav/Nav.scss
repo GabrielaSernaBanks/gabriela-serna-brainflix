@@ -20,19 +20,29 @@
 	}
 
 	&__logo {
-		padding-left: 6.25rem;
+		width: 100%;
+		margin: 1rem 0;
+		// padding-left: 6.25rem;
 
 		@include tablet {
-			padding-left: 1rem;
+			// padding-left: 1rem;
 		}
 	}
 
 	&__logo-image {
+		width: 100%;
 		height: 1.5625rem;
-		padding: 1rem;
+		// padding: 1rem;
+	}
+
+	&__search-container {
+		width: 100%;
+		display: flex;
+
 	}
 
 	&__search {
+		width: 100%;
 		display: flex;
 		padding: 0 1rem;
 
@@ -42,7 +52,7 @@
 	}
 
 	&__search-bar {
-		width: 200px;
+		width: 100%;
 		height: 2.25rem;
 		padding-left: 2.5rem;
 		background-color: $secondary-color-alabaster;
@@ -80,7 +90,8 @@
 
 	}
 
-	&__search-image--tablet {
+	&__search-image--tablet {	
+		width: 100%;
 		display: none;
 
 		@include tablet {
@@ -95,7 +106,9 @@
 }
 
 .upload {
-	padding: 1rem 1em;
+	// padding: 1rem 1em;
+	width: 100%;
+
 
 	@include tablet {
 		display: flex;
@@ -104,7 +117,7 @@
 	}
 
 	&__button {
-		width: 290px;
+		width: 100%;
 		@include button;
 
 		@include tablet {

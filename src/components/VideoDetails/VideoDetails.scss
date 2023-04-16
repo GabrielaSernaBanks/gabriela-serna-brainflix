@@ -10,11 +10,9 @@
 
 	&__image {
 		width: 100%;
-		height: 15rem;
-		margin-top: -1.5625rem;
+		max-height: 15rem;
 
 		@include tablet {
-			margin-top: 0;
 			background-color: $secondary-color-black;
 			height: 20rem;
 		}
@@ -35,11 +33,18 @@
 	&__header {
 		border-bottom: 1px solid $secondary-color-mercury;
 		padding-bottom: .5rem;
+		margin: 0 1rem;
 		@include page-header-mobile;
 
 		@include tablet {
 			@include page-header-tablet-desktop;
 		}
+	}
+
+	&__details{
+		display: flex;
+		justify-content: space-between;
+		margin: 0 1rem;
 	}
 
 	&__date {
@@ -54,7 +59,7 @@
 
 	&__info-2 {
 		color: $primary-color-silver;
-		padding-right: 2rem;
+		// padding-right: 2rem;
 
 		@include tablet {
 			display: flex;
@@ -78,6 +83,7 @@
 	}
 
 	&__description {
+		margin: 0 1rem;
 		@include body-copy-mobile;
 	}
 }
