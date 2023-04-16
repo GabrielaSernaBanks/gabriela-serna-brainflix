@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function NextVideo({ video }) {
     return (
-        <div>
+        <div className='nextVideo'>
             <Link className='nextVideo__link' to={`/video/${video.id}`}>
                 <div className='nextVideo__image-container'>
                     <img className="nextVideo__image" src={video.image}></img>

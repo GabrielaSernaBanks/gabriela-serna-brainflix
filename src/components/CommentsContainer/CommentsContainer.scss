@@ -37,14 +37,11 @@
       justify-content: space-between;
       align-items: flex-end;
     }
-
- 
   }
 
   &__title{
     @include section-header-mobile;
     color: $primary-color-silver;
-
   }
 
   &__newComment{
@@ -58,17 +55,17 @@
     @include tablet {
       height: 2.25rem;
     }
-
   }
 
   &__button{
+    width: 100%;
     margin-top: 1rem;
     @include button;
 
   }
 
   &__button-text{
-    padding-left: 5rem;
+    width: 100%;
 
     @include tablet{
       padding-right: 2rem;

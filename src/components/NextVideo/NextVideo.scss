@@ -3,26 +3,25 @@
 @import "../../styles/partials/variables";
 @import "../../styles/partials/typography.scss";
 
-.nextVideo{
-  margin-left: 1rem;
-  display: flex;
-  align-items: center;
+.nextVideo {
+	margin-left: 1rem;
+	display: flex;
 
-&__info{
-  padding-left: 1rem;
-  @include subheader-mobile;
-}
+	&__info {
+		padding-left: 1rem;
+		@include subheader-mobile;
+	}
 
-&__image{
-  height: 75px;
-  width: 130px;
-  border-radius: 4px;
-  object-fit: cover;
-}
+	&__image {
+		height: 75px;
+		width: 130px;
+		border-radius: 4px;
+		object-fit: cover;
+	}
 
-&__title{
-  width: 100%;
-  font-weight: 700;
-}
+	&__title {
+		width: 100%;
+		font-weight: 700;
+	}
 
 }

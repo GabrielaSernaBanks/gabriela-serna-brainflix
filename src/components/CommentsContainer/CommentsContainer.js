@@ -18,7 +18,6 @@ function CommentsContainer({ videoSelectedId, baseUrl, ApiKey }) {
                 setVideo(response.data.comments);
             });
     }, [videoSelectedId]);
-    console.log(video);
 
     if (video === null) {
         return <div>Loading!!</div>;

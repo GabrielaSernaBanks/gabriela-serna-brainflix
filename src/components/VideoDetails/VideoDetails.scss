@@ -45,6 +45,8 @@
 		display: flex;
 		justify-content: space-between;
 		margin: 0 1rem;
+		border-bottom: 1px solid $secondary-color-mercury;
+
 	}
 
 	&__date {
@@ -59,7 +61,7 @@
 
 	&__info-2 {
 		color: $primary-color-silver;
-		// padding-right: 2rem;
+		padding-right: 2rem;
 
 		@include tablet {
 			display: flex;
@@ -83,7 +85,7 @@
 	}
 
 	&__description {
-		margin: 0 1rem;
+		margin: 1rem 1rem 0rem 1rem;
 		@include body-copy-mobile;
 	}
 }

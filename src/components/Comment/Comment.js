@@ -2,7 +2,6 @@ import './Comment.scss';
 
 
 function Comment({userComment}) {
-  console.log(userComment);
   const epoch = userComment.timestamp;
   const date = new Date(epoch).toLocaleDateString("en-US")
 
