@@ -32,9 +32,19 @@ function MainVideo (){
 
     return (
         <div className='mainVideo'>
-            <VideoDetails videoSelectedId={videoSelectedId} baseUrl={baseUrl} ApiKey={ApiKey}/>
-            <CommentsContainer videoSelectedId={videoSelectedId} baseUrl={baseUrl} ApiKey={ApiKey} />
-            <NextVideoContainer nextVideo={nextVideo} />
+            <div className='mainVideo__container'>
+                <div className='mainVideo__details'>
+                    <VideoDetails videoSelectedId={videoSelectedId} baseUrl={baseUrl} ApiKey={ApiKey}/>
+                </div>
+                <div className='mainVideo__example'>
+                <CommentsContainer videoSelectedId={videoSelectedId} baseUrl={baseUrl} ApiKey={ApiKey} />
+                <div className='mainVideo__next-video'>
+                    <NextVideoContainer nextVideo={nextVideo} />
+                </div>
+                </div>
+
+            </div>
+            
         </div>
         );
 }
