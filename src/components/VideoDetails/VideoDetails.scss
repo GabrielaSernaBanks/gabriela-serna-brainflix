@@ -13,7 +13,6 @@
 		max-height: 15rem;
 		background-color: $secondary-color-black;
 
-
 		@include tablet {
 			max-height: 20rem;
 		}
@@ -61,7 +60,6 @@
 		justify-content: space-between;
 		margin: 0 1rem;
 		border-bottom: 1px solid $secondary-color-mercury;
-
 	}
 
 	&__date {
@@ -114,7 +112,6 @@
 
 		@include desktop{
 			@include body-copy-tablet-desktop
-
 		}
 	}
 }

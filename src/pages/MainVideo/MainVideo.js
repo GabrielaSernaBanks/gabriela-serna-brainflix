@@ -40,9 +40,7 @@ function MainVideo (){
                 <div className='mainVideo__next-video'>
                     <NextVideoContainer nextVideo={nextVideo} />
                 </div>
-
-            </div>
-            
+            </div>           
         </div>
         );
 }
