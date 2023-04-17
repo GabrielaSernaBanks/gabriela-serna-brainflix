@@ -29,7 +29,9 @@
 		@include subheader-mobile;
 
 		@include desktop{
-			width: 75%;
+			width: 55%;
+			margin-left: 8rem;
+			padding-top: 1.5rem;
 		}
 	}
 
@@ -47,7 +49,10 @@
 	&__header--tablet-desktop{
 		@include tablet{
 			border-bottom: none;
-
+		}
+		@include desktop {
+			font-size: 2.5rem;
+			font-weight: 900;
 		}
 	}
 
@@ -61,6 +66,10 @@
 
 	&__date {
 		color: $primary-color-silver;
+
+		@include desktop{
+			font-size: 1rem;
+		}
 	}
 
 	&__info {
@@ -82,6 +91,11 @@
 		@include tablet {
 			padding-right: 2rem;
 		}
+
+		@include desktop{
+			font-size: 1rem;
+			font-weight: 800;
+		}
 	}
 
 	&__likes {
@@ -97,5 +111,10 @@
 	&__description {
 		margin: 1rem 1rem 0rem 1rem;
 		@include body-copy-mobile;
+
+		@include desktop{
+			@include body-copy-tablet-desktop
+
+		}
 	}
 }

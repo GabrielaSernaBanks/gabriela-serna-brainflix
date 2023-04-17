@@ -3,35 +3,77 @@
 @import "../../styles/partials/variables";
 @import "../../styles/partials/typography.scss";
 
+
 .mainVideo{
-  display: flex;
-  flex-direction: column;
-
-
-
   &__container{
 
-    display: flex;
-    flex-direction: column;
-    // @include desktop{
-    //   display: flex;
-    //   flex-direction: row;
-    // }
-  }
-
-  &__example{
     @include desktop{
       display: flex;
-      margin-top: 0;
+      flex-direction: row;
+      width: 80%;
+      margin: 0 auto;
     }
   }
 
-  &__next-video{
-    // @include desktop{
-    //   display: flex;
-    //   flex-direction: row;
-    // }
+  &__comments{
+    margin-top: 3rem;
+  }
+
+  &__next-video {
+    margin-top: -13rem;
+  }
+}
+
+.mainVideo__next-video{
+
+  margin-top: 0;
+
+  @include tablet{
+    margin-top: 0;
 
   }
 
+  @include desktop {
+    margin-top: -16rem;
+    margin-right: 2.3rem;
+  }
 }
+
+
+
+
+
+
+
+// .mainVideo{
+//   display: flex;
+//   flex-direction: column;
+
+
+
+//   &__container{
+
+//     display: flex;
+//     flex-direction: column;
+//     // @include desktop{
+//     //   display: flex;
+//     //   flex-direction: row;
+//     // }
+//   }
+
+//   &__example{
+//     @include desktop{
+//       display: flex;
+//       margin-top: 0;
+//     }
+//   }
+
+//   &__next-video{
+//     // @include desktop{
+//     //   display: flex;
+//     //   flex-direction: row;
+//     // }
+
+//   }
+
+// }
