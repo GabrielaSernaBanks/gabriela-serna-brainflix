@@ -13,14 +13,36 @@
     border-top: 1px solid $secondary-color-mercury;
   }
 
+  &__items{
+    @include desktop{
+      display: flex;
+      margin: 0 8rem;
+    }
+
+  }
+
   &__header{
     padding-top: 1rem;
     margin-left: 1rem;
     margin-top: 0rem;
+
+    @include tablet{
+      border-bottom: 1px solid $secondary-color-mercury;
+      width: 95%;
+      padding-bottom: 1rem;
+    }
+
+    @include desktop{
+      margin-left: 8rem;
+    }
   }
 
   &__image-container{
     width: 100%;
+
+    @include desktop{
+      width: 33%;
+    }
   }
 
   &__subheader{
@@ -34,7 +56,12 @@
     max-height: 10rem;
     border-radius: 4px;
     margin-left: 1rem;
-  
+  }
+
+  &__form-container{
+    @include desktop{
+      width: 66%;
+    }
   }
 
   &__title{
@@ -45,12 +72,22 @@
   &__description{
     @include section-header-mobile;
     color: $primary-color-silver;
+    margin-top: 1.5rem;
+
   }
 
   &__formInput{
     display: flex;
     flex-direction: column;
     padding: 1rem 1rem;
+
+    @include tablet{
+      border-bottom: 1px solid $secondary-color-mercury;
+    }
+
+    // @include desktop{
+    //   width: 100%;
+    // }
   }
 
   &__video-title{
@@ -69,16 +106,35 @@
     border-radius: 4px;
     width: 97.5%;
     text-align: start;
+
+
   }
 
   &__buttons{
     padding: 0 1rem;
+
+    @include tablet{
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: baseline;
+    }
+
+    @include desktop{
+      margin-right: 9rem;
+    }
   }
 
   &__button{
     @include button;
     width: 100%;
 
+    @include tablet{
+      width: 30%;
+    }
+
+    @include desktop{
+      width: 20%;
+    }
   }
 
   &__button-text{
@@ -95,5 +151,9 @@
     font-family: 'Avenir';
     font-weight: 700;
     margin-top: 1rem;
+
+    @include tablet{
+      width: 35%;
+    }
   }
 }

@@ -10,6 +10,9 @@ function UploadPage() {
 			<div className='uploadPage__header-container'>
 				<h1 className='uploadPage__header'>Upload Video</h1>
 			</div>
+			<div className='uploadPage__items'>
+				
+			
 			<div className='uploadPage__image-container'>
 				<p className='uploadPage__subheader'>VIDEO THUMBNAIL</p>
 				<img className='uploadPage__thumbnail' src={thumbnail} />
@@ -40,7 +43,10 @@ function UploadPage() {
 							placeholder="Add a description to your video"
 						></input>
 					</div>
-					<div className='uploadPage__buttons'>
+				</form>
+			</div>
+			</div>
+			<div className='uploadPage__buttons'>
 						<button className="uploadPage__button">
 							<img className='uploadPage__button-icon' src={publishIcon}></img>
 							<span className="uploadPage__button-text">PUBLISH</span>
@@ -48,8 +54,6 @@ function UploadPage() {
 						<button className="uploadPage__button-cancel">CANCEL
 						</button>
 					</div>
-				</form>
-			</div>
 		</div>
 	);
 }
