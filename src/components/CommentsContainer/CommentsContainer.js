@@ -5,7 +5,7 @@ import addComment from "../../assets/Icons/add_comment.svg";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-function CommentsContainer({ videoSelectedId, baseUrl, ApiKey }) {
+function CommentsContainer({ videoSelectedId, baseUrl, ApiKey}) {
     const [video, setVideo] = useState(null);
     useEffect(() => {
     
@@ -25,7 +25,7 @@ function CommentsContainer({ videoSelectedId, baseUrl, ApiKey }) {
 
     return (
         <div className="commentsContainer">
-            <p className="commentsContainer__count">Comments</p>
+            <p className="commentsContainer__count"> {video.length} Comments</p>
             <div className="commentsContainer__details">
                 <img
                     className="commentsContainer__avatar"

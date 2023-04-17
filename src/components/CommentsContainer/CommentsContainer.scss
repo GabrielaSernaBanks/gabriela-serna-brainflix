@@ -4,92 +4,94 @@
 @import "../../styles/partials/typography.scss";
 
 
-.commentsContainer{
-  padding: 0 1rem;
+.commentsContainer {
+	padding: 0 1rem;
 
-  &__count{
-    font-size: .75rem;
-    font-weight: 700;
-  }
+	&__count {
+		font-size: .75rem;
+		font-weight: 700;
+	}
 
-  &__details{
-    display: flex;
-  }
+	&__details {
+		display: flex;
+	}
 
-  &__avatar{
-    height:2.25rem;
-    width:2.25rem;
-    border-radius:50%;
-    margin-top: 1.2rem;
-    object-fit: cover;
-  }
+	&__avatar {
+		height: 2.25rem;
+		width: 2.25rem;
+		border-radius: 50%;
+		margin-top: 1.2rem;
+		object-fit: cover;
+	}
 
-  &__form{
-    display: flex;
-    flex-direction: column;
-    padding-bottom: .625rem;
-    padding-left: .5rem;
-    width: 100%;
+	&__form {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: .625rem;
+		padding-left: .5rem;
+		width: 100%;
 
-    @include tablet{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-  }
+		@include tablet {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-end;
+		}
+	}
 
-  &__title{
-    @include section-header-mobile;
-    color: $primary-color-silver;
-  }
+	&__title {
+		@include section-header-mobile;
+		color: $primary-color-silver;
+	}
 
-  &__newComment{
-    height: 5rem;
-    background-color: $secondary-color-alabaster;
-    border: 1px solid $secondary-color-mercury;
-    border-radius: 4px;
-    width: 97.5%;
-    text-align: start;
+	&__newComment {
+		height: 5rem;
+		background-color: $secondary-color-alabaster;
+		border: 1px solid $secondary-color-mercury;
+		border-radius: 4px;
+		width: 97.5%;
+		text-align: start;
 
-    @include tablet {
-      height: 2.25rem;
-    }
+		@include tablet {
+			height: 2.25rem;
+		}
 
-    @include desktop{
-      width: 100%;
-    }
-  }
+		@include desktop {
+			width: 100%;
+		}
+	}
 
-  &__button{
-    width: 100%;
-    margin-top: 1rem;
-    @include button;
+	&__button {
+		width: 100%;
+		margin-top: 1rem;
+		@include button;
 
-    @include desktop{
-      width: 45%;
-    }
+		&:hover{
+			cursor: pointer;
+			background-color: $secondary-color-blue;
+			transition: 0.5s ease;
+		}
 
-  }
 
-  &__button-text{
-    width: 100%;
+		@include desktop {
+			width: 45%;
+		}
 
-    // @include tablet{
-    //   padding-right: 2rem;
-    //   margin-left: -3.5rem;
-    // }
-  }
+	}
 
-  &__formInput {
-    
-    @include tablet{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding-right: 1.5rem;
-        padding-left: 0.5rem;
-      }
-    }
+	&__button-text {
+		width: 100%;
+	}
+
+	&__formInput {
+
+		@include tablet {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			padding-right: 1.5rem;
+			padding-left: 0.5rem;
+		}
+	}
 
 }
