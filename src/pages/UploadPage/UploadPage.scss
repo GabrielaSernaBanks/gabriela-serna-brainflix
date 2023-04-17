@@ -3,157 +3,157 @@
 @import "../../styles/partials/variables";
 @import "../../styles/partials/typography.scss";
 
-.uploadPage{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+.uploadPage {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
 
-  &__header-container{
-    width: 100%;
-    border-top: 1px solid $secondary-color-mercury;
-  }
+	&__header-container {
+		width: 100%;
+		border-top: 1px solid $secondary-color-mercury;
+	}
 
-  &__items{
-    @include desktop{
-      display: flex;
-      margin: 0 8rem;
-    }
+	&__items {
+		@include desktop {
+			display: flex;
+			margin: 0 8rem;
+		}
 
-  }
+	}
 
-  &__header{
-    padding-top: 1rem;
-    margin-left: 1rem;
-    margin-top: 0rem;
+	&__header {
+		padding-top: 1rem;
+		margin-left: 1rem;
+		margin-top: 0rem;
 
-    @include tablet{
-      border-bottom: 1px solid $secondary-color-mercury;
-      width: 95%;
-      padding-bottom: 1rem;
-    }
+		@include tablet {
+			border-bottom: 1px solid $secondary-color-mercury;
+			width: 95%;
+			padding-bottom: 1rem;
+		}
 
-    @include desktop{
-      margin-left: 8rem;
-    }
-  }
+		@include desktop {
+			margin-left: 8rem;
+		}
+	}
 
-  &__image-container{
-    width: 100%;
+	&__image-container {
+		width: 100%;
 
-    @include desktop{
-      width: 33%;
-    }
-  }
+		@include desktop {
+			width: 33%;
+		}
+	}
 
-  &__subheader{
-    @include subheader-mobile;
-    font-weight: 700;
-    color: $primary-color-silver;
-    padding-left: 1rem;
-  }
+	&__subheader {
+		@include subheader-mobile;
+		font-weight: 700;
+		color: $primary-color-silver;
+		padding-left: 1rem;
+	}
 
-  &__thumbnail{
-    max-height: 10rem;
-    border-radius: 4px;
-    margin-left: 1rem;
-  }
+	&__thumbnail {
+		max-height: 10rem;
+		border-radius: 4px;
+		margin-left: 1rem;
+	}
 
-  &__form-container{
-    @include desktop{
-      width: 66%;
-    }
-  }
+	&__form-container {
+		@include desktop {
+			width: 66%;
+		}
+	}
 
-  &__title{
-    @include section-header-mobile;
-    color: $primary-color-silver;
-  }
+	&__title {
+		@include section-header-mobile;
+		color: $primary-color-silver;
+	}
 
-  &__description{
-    @include section-header-mobile;
-    color: $primary-color-silver;
-    margin-top: 1.5rem;
+	&__description {
+		@include section-header-mobile;
+		color: $primary-color-silver;
+		margin-top: 1.5rem;
 
-  }
+	}
 
-  &__formInput{
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 1rem;
+	&__formInput {
+		display: flex;
+		flex-direction: column;
+		padding: 1rem 1rem;
 
-    @include tablet{
-      border-bottom: 1px solid $secondary-color-mercury;
-    }
+		@include tablet {
+			border-bottom: 1px solid $secondary-color-mercury;
+		}
 
-    // @include desktop{
-    //   width: 100%;
-    // }
-  }
+		// @include desktop{
+		//   width: 100%;
+		// }
+	}
 
-  &__video-title{
-    height: 2rem;
-    background-color: $secondary-color-alabaster;
-    border: 1px solid $secondary-color-mercury;
-    border-radius: 4px;
-    width: 97.5%;
-    text-align: start;
-  }
+	&__video-title {
+		height: 2rem;
+		background-color: $secondary-color-alabaster;
+		border: 1px solid $secondary-color-mercury;
+		border-radius: 4px;
+		width: 97.5%;
+		text-align: start;
+	}
 
-  &__video-description{
-    height: 5rem;
-    background-color: $secondary-color-alabaster;
-    border: 1px solid $secondary-color-mercury;
-    border-radius: 4px;
-    width: 97.5%;
-    text-align: start;
+	&__video-description {
+		height: 5rem;
+		background-color: $secondary-color-alabaster;
+		border: 1px solid $secondary-color-mercury;
+		border-radius: 4px;
+		width: 97.5%;
+		text-align: start;
 
 
-  }
+	}
 
-  &__buttons{
-    padding: 0 1rem;
+	&__buttons {
+		padding: 0 1rem;
 
-    @include tablet{
-      display: flex;
-      flex-direction: row-reverse;
-      align-items: baseline;
-    }
+		@include tablet {
+			display: flex;
+			flex-direction: row-reverse;
+			align-items: baseline;
+		}
 
-    @include desktop{
-      margin-right: 9rem;
-    }
-  }
+		@include desktop {
+			margin-right: 9rem;
+		}
+	}
 
-  &__button{
-    @include button;
-    width: 100%;
+	&__button {
+		@include button;
+		width: 100%;
 
-    @include tablet{
-      width: 30%;
-    }
+		@include tablet {
+			width: 30%;
+		}
 
-    @include desktop{
-      width: 20%;
-    }
-  }
+		@include desktop {
+			width: 20%;
+		}
+	}
 
-  &__button-text{
-    width: 100%;
-  }
+	&__button-text {
+		width: 100%;
+	}
 
-  &__button-cancel{
-    width: 100%;
-    height: 2.5rem;
-    background-color: $primary-color-white;
-    border: none;
-    border-radius: 4px;
-    color: $primary-color-blue;
-    font-family: 'Avenir';
-    font-weight: 700;
-    margin-top: 1rem;
+	&__button-cancel {
+		width: 100%;
+		height: 2.5rem;
+		background-color: $primary-color-white;
+		border: none;
+		border-radius: 4px;
+		color: $primary-color-blue;
+		font-family: 'Avenir';
+		font-weight: 700;
+		margin-top: 1rem;
 
-    @include tablet{
-      width: 35%;
-    }
-  }
+		@include tablet {
+			width: 35%;
+		}
+	}
 }
