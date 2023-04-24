@@ -28,7 +28,6 @@ function Nav() {
                     <span className="upload__button-text">UPLOAD</span>
                 </button>
                 </Link>
-
             </div>
         </div>
     )

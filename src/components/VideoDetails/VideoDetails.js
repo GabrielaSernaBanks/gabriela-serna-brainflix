@@ -4,33 +4,32 @@ import viewsIcon from '../../assets/Icons/views.svg'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-function VideoDetails({ videoSelectedId, baseUrl, ApiKey }) {
+function VideoDetails({ videoSelectedId, baseUrl}) {
 	const [video, setVideo] = useState(null);
 
 	useEffect(() => {
 		if (videoSelectedId === null) {
 			return;
 		}
-		axios.get(`${baseUrl}/videos/${videoSelectedId}${ApiKey}`)
+		axios.get(`${baseUrl}/videos/${videoSelectedId}`)
 			.then(response => {
-				setVideo(response.data);
-			}
-			)
+				setVideo(response.data[0]);
+			})
 	}, [videoSelectedId]);
 
 	if (video === null) {
 		return <div>Loading!!</div>
 	}
-
 	const epoch = video.timestamp;
 	const date = new Date(epoch).toLocaleDateString("en-US")
 
 	const { title, channel, image, description, views, likes } = video;
 
-
 	return (
 		<div className='videoDetails'>
-			<video className="videoDetails__image" poster={image} controls></video>
+			<video className="videoDetails__image" poster={image} controls>
+				<source src={video} type="video/mp4" />
+			</video>
 			<div className='videoDetails__container'>
 				<h1 className='videoDetails__header videoDetails__header--tablet-desktop'>{title}</h1>
 				<div className='videoDetails__details'>
@@ -40,11 +39,11 @@ function VideoDetails({ videoSelectedId, baseUrl, ApiKey }) {
 					</div>
 					<div className='videoDetails__info-2'>
 						<p className='videoDetails__views'>
-							<img className='videoDetails__icon' src={viewsIcon}>
+							<img className='videoDetails__icon' src={viewsIcon} alt='Eye icon'>
 							</img>{views}
 						</p>
 						<p className='videoDetails__likes'>
-							<img className='videoDetails__icon' src={likesIcon}>
+							<img className='videoDetails__icon' src={likesIcon} alt='Heart icon'>
 							</img>{likes}
 						</p>
 					</div>

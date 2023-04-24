@@ -5,17 +5,17 @@ import addComment from "../../assets/Icons/add_comment.svg";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-function CommentsContainer({ videoSelectedId, baseUrl, ApiKey}) {
-    const [video, setVideo] = useState(null);
+function CommentsContainer({ videoSelectedId, baseUrl}) {
+    const [video, setVideo] = useState([]);
     useEffect(() => {
     
         if (videoSelectedId === null) {
             return;
         }
         axios
-            .get(`${baseUrl}/videos/${videoSelectedId}${ApiKey}`)
+            .get(`${baseUrl}/videos/${videoSelectedId}`)
             .then((response) => {
-                setVideo(response.data.comments);
+            setVideo(response.data[0].comments);
             });
     }, [videoSelectedId]);
 
@@ -30,7 +30,7 @@ function CommentsContainer({ videoSelectedId, baseUrl, ApiKey}) {
                 <img
                     className="commentsContainer__avatar"
                     src={avatar}
-                    alt="Side photo of a fan"
+                    alt="Face of a user"
                 ></img>
                 <form className="commentsContainer__form">
                     <div className="commentsContainer__formInput">
@@ -47,7 +47,7 @@ function CommentsContainer({ videoSelectedId, baseUrl, ApiKey}) {
                         ></input>
                     </div>
                     <button className="commentsContainer__button">
-                        <img src={addComment}></img>
+                        <img src={addComment} alt="Side face of fan" ></img>
                         <span className="commentsContainer__button-text">COMMENT</span>
                     </button>
                 </form>
